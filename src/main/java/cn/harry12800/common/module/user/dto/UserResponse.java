@@ -8,29 +8,27 @@ import cn.harry12800.common.core.serial.Serializer;
  *
  */
 public class UserResponse extends Serializer {
-	
-	
+
 	/**
 	 * id
 	 */
 	private long id;
-	
+
 	/**
 	 * 用户名
 	 */
 	private String userName;
-	
+
 	/**
 	 * 等级
 	 */
 	private int level;
-	
+
 	/**
 	 * 经验值
 	 */
 	private int exp;
-	
-	
+
 	public long getId() {
 		return id;
 	}

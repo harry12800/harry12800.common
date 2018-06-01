@@ -1,11 +1,12 @@
 package cn.harry12800.common.module;
+
 /**
  * 玩家模块
  * @author -harry12800-
  *
  */
 public interface UserCmd {
-	
+
 	/**
 	 * 创建并登录帐号
 	 */
@@ -19,4 +20,3 @@ public interface UserCmd {
 	short SHOW_ALL_USER = 3;
 	short PULL_MSG = 4;
 }
-                                                  

@@ -59,7 +59,7 @@ public class MsgResponse extends Serializer {
 	}
 
 	public MsgResponse setFromId(long fromId) {
-		this.fromId = fromId;	
+		this.fromId = fromId;
 		return this;
 	}
 
@@ -68,7 +68,8 @@ public class MsgResponse extends Serializer {
 	}
 
 	public MsgResponse setToId(long toId) {
-		this.toId = toId;	return this;
+		this.toId = toId;
+		return this;
 	}
 
 	public Date getSendTime() {
@@ -82,7 +83,8 @@ public class MsgResponse extends Serializer {
 	}
 
 	public MsgResponse setSendTime(Date sendTime) {
-		this.sendTime = sendTime;	return this;
+		this.sendTime = sendTime;
+		return this;
 	}
 
 	public int getDataType() {
@@ -90,7 +92,8 @@ public class MsgResponse extends Serializer {
 	}
 
 	public MsgResponse setDataType(int dataType) {
-		this.dataType = dataType;	return this;
+		this.dataType = dataType;
+		return this;
 	}
 
 	public byte[] getData() {
@@ -98,7 +101,8 @@ public class MsgResponse extends Serializer {
 	}
 
 	public MsgResponse setData(byte[] data) {
-		this.data = data;	return this;
+		this.data = data;
+		return this;
 	}
 
 }

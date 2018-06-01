@@ -10,7 +10,7 @@ public class ShowAllUserResponse extends Serializer {
 
 	@Override
 	protected void read() {
-		users= readList(UserResponse.class);
+		users = readList(UserResponse.class);
 	}
 
 	@Override
@@ -25,5 +25,5 @@ public class ShowAllUserResponse extends Serializer {
 	public void setUsers(List<UserResponse> users) {
 		this.users = users;
 	}
- 
+
 }

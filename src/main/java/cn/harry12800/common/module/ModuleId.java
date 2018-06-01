@@ -1,12 +1,12 @@
 package cn.harry12800.common.module;
 
 public interface ModuleId {
-	
+
 	/**
 	 * 玩家模块
 	 */
 	short USER = 1;
-	
+
 	/**
 	 * 聊天
 	 */
@@ -16,4 +16,3 @@ public interface ModuleId {
 	 */
 	short RESOURCE = 3;
 }
-                                                  

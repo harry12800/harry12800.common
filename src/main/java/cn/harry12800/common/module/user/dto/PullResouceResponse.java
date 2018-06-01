@@ -11,7 +11,7 @@ public class PullResouceResponse extends Serializer {
 
 	@Override
 	protected void read() {
-		resources= readList(ResourceDto.class);
+		resources = readList(ResourceDto.class);
 	}
 
 	@Override
@@ -26,6 +26,5 @@ public class PullResouceResponse extends Serializer {
 	public void setResources(List<ResourceDto> resources) {
 		this.resources = resources;
 	}
-	 
 
 }

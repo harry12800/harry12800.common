@@ -1,8 +1,10 @@
 package cn.harry12800.common.core.codc;
+
 import cn.harry12800.common.core.model.Request;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
+
 /**
  * <pre>
  * 数据包格式
@@ -13,7 +15,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * @author -harry12800-
  *
  */
-public class RequestEncoder extends MessageToByteEncoder<Request>{
+public class RequestEncoder extends MessageToByteEncoder<Request> {
 
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Request message, ByteBuf buffer) throws Exception {
@@ -25,10 +27,10 @@ public class RequestEncoder extends MessageToByteEncoder<Request>{
 		//cmd
 		buffer.writeShort(message.getCmd());
 		//长度
-		int lenth = message.getData()==null? 0 : message.getData().length;
-		if(lenth <= 0){
+		int lenth = message.getData() == null ? 0 : message.getData().length;
+		if (lenth <= 0) {
 			buffer.writeInt(lenth);
-		}else{
+		} else {
 			buffer.writeInt(lenth);
 			buffer.writeBytes(message.getData());
 		}

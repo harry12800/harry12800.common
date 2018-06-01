@@ -1,23 +1,23 @@
 package cn.harry12800.common.module.chat.dto;
 
 import cn.harry12800.common.core.serial.Serializer;
+
 /**
  * 私聊请求
  * @author -harry12800-
  *
  */
-public class PrivateChatRequest extends Serializer{
-	
+public class PrivateChatRequest extends Serializer {
+
 	/**
 	 * 要向哪个会话发消息
 	 */
 	private long targetPlayerId;
-	
+
 	/**
 	 * 内容
 	 */
 	private String context;
-
 
 	public long getTargetPlayerId() {
 		return targetPlayerId;

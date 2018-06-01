@@ -7,13 +7,13 @@ import cn.harry12800.common.core.serial.Serializer;
  * @author -harry12800-
  *
  */
-public class RegisterRequest extends Serializer{
-	
+public class RegisterRequest extends Serializer {
+
 	/**
 	 * 用户名
 	 */
 	private String playerName;
-	
+
 	/**
 	 * 密码
 	 */
@@ -34,7 +34,7 @@ public class RegisterRequest extends Serializer{
 	public void setPassward(String passward) {
 		this.passward = passward;
 	}
-	
+
 	@Override
 	protected void read() {
 		this.playerName = readString();

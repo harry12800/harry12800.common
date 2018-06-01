@@ -1,8 +1,10 @@
 package cn.harry12800.common.core.codc;
+
 import cn.harry12800.common.core.model.Response;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
+
 /**
  * <pre>
  * 数据包格式
@@ -13,13 +15,13 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * @author -harry12800-
  *
  */
-public class ResponseEncoder extends MessageToByteEncoder<Response>{
+public class ResponseEncoder extends MessageToByteEncoder<Response> {
 
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Response response, ByteBuf buffer) throws Exception {
-		
-		System.out.println("返回请求:" + "module:" +response.getModule() +" cmd:" + response.getCmd() + " resultCode:" + response.getStateCode());
-		
+
+		System.out.println("返回请求:" + "module:" + response.getModule() + " cmd:" + response.getCmd() + " resultCode:" + response.getStateCode());
+
 		//包头
 		buffer.writeInt(ConstantValue.HEADER_FLAG);
 		//module和cmd
@@ -28,10 +30,10 @@ public class ResponseEncoder extends MessageToByteEncoder<Response>{
 		//结果码
 		buffer.writeInt(response.getStateCode());
 		//长度
-		int lenth = response.getData()==null? 0 : response.getData().length;
-		if(lenth <= 0){
+		int lenth = response.getData() == null ? 0 : response.getData().length;
+		if (lenth <= 0) {
 			buffer.writeInt(lenth);
-		}else{
+		} else {
 			buffer.writeInt(lenth);
 			buffer.writeBytes(response.getData());
 		}

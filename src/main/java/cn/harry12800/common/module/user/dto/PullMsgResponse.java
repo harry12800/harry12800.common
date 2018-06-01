@@ -11,7 +11,7 @@ public class PullMsgResponse extends Serializer {
 
 	@Override
 	protected void read() {
-		msgs= readList(MsgResponse.class);
+		msgs = readList(MsgResponse.class);
 	}
 
 	@Override

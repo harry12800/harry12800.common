@@ -10,7 +10,7 @@ public class ResourceDto extends Serializer {
 	private int resourceType;
 	private String resourceName;
 	private byte[] data;
-	
+
 	@Override
 	public String toString() {
 		return "ResourceDto [id=" + id + ", providerId=" + providerId + ", recipientId=" + recipientId + ", grantTime=" + grantTime + ", resourceType=" + resourceType + ", resourceName="
@@ -25,8 +25,8 @@ public class ResourceDto extends Serializer {
 		grantTime = readLong();
 		resourceType = readInt();
 		resourceName = readString();
-		System.err.println("readBuffer:"+readBuffer.readableBytes());
-		data =new byte[ readBuffer.readableBytes()];
+		System.err.println("readBuffer:" + readBuffer.readableBytes());
+		data = new byte[readBuffer.readableBytes()];
 		readBuffer.readBytes(data);
 	}
 
@@ -38,7 +38,8 @@ public class ResourceDto extends Serializer {
 		writeLong(grantTime);
 		writeInt(resourceType);
 		writeString(resourceName);
-		if(data == null) data = new byte[0];
+		if (data == null)
+			data = new byte[0];
 		writeBuffer.writeBytes(data);
 	}
 

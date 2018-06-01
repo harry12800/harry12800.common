@@ -1,27 +1,28 @@
 package cn.harry12800.common.core.model;
+
 /**
  * 消息对象
  * @author -harry12800-
  *
  */
 public class Request {
-	
+
 	/**
 	 * 模块号
 	 */
 	private short module;
-	
+
 	/**
 	 * 命令号
 	 */
 	private short cmd;
-	
+
 	/**
 	 * 数据
 	 */
 	private byte[] data;
-	
-	public static Request valueOf(short module, short cmd, byte[] data){
+
+	public static Request valueOf(short module, short cmd, byte[] data) {
 		Request request = new Request();
 		request.setModule(module);
 		request.setCmd(cmd);

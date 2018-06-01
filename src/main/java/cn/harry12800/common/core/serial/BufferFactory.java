@@ -5,6 +5,7 @@ import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.PooledByteBufAllocator;
 
 import java.nio.ByteOrder;
+
 /**
  * buff工厂
  * @author -harry12800-
@@ -12,9 +13,9 @@ import java.nio.ByteOrder;
  */
 @SuppressWarnings("deprecation")
 public class BufferFactory {
-	
+
 	public static ByteOrder BYTE_ORDER = ByteOrder.BIG_ENDIAN;
-	
+
 	private static ByteBufAllocator bufAllocator = PooledByteBufAllocator.DEFAULT;
 
 	/**

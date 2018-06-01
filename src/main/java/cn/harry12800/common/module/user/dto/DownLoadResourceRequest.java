@@ -2,9 +2,10 @@ package cn.harry12800.common.module.user.dto;
 
 import cn.harry12800.common.core.serial.Serializer;
 
-public class DownLoadResourceRequest extends Serializer{
+public class DownLoadResourceRequest extends Serializer {
 
 	private long resourceId;
+
 	@Override
 	protected void read() {
 		resourceId = readLong();
@@ -22,5 +23,5 @@ public class DownLoadResourceRequest extends Serializer{
 	public void setResourceId(long resourceId) {
 		this.resourceId = resourceId;
 	}
- 
+
 }

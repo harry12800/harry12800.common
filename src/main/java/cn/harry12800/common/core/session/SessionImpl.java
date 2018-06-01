@@ -9,18 +9,17 @@ import io.netty.util.AttributeKey;
  *
  */
 public class SessionImpl implements Session {
-	
+
 	/**
 	 * 绑定对象key
 	 */
-	public static AttributeKey<Object> ATTACHMENT_KEY  = AttributeKey.valueOf("ATTACHMENT_KEY");
-	
+	public static AttributeKey<Object> ATTACHMENT_KEY = AttributeKey.valueOf("ATTACHMENT_KEY");
+
 	/**
 	 * 实际会话对象
 	 */
 	private Channel channel;
-	
-	
+
 	public SessionImpl(Channel channel) {
 		this.channel = channel;
 	}
@@ -34,10 +33,10 @@ public class SessionImpl implements Session {
 	public void setAttachment(Object attachment) {
 		channel.attr(ATTACHMENT_KEY).set(attachment);
 	}
-	
+
 	@Override
 	public void removeAttachment() {
-//		remove 过过期
+		//		remove 过过期
 		channel.attr(ATTACHMENT_KEY).set(null);
 	}
 
@@ -55,7 +54,5 @@ public class SessionImpl implements Session {
 	public void close() {
 		channel.close();
 	}
-
-
 
 }

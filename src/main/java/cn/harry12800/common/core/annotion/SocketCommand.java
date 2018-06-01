@@ -16,11 +16,12 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SocketCommand {
-	
+
 	/**
 	 * 请求的命令号
 	 * @return
 	 */
 	short cmd();
+
 	String desc();
 }

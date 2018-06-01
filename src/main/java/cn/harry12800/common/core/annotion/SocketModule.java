@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SocketModule {
-	
+
 	/**
 	 * 请求的模块号
 	 * @return

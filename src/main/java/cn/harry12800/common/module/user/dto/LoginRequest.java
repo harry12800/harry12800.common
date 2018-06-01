@@ -7,13 +7,13 @@ import cn.harry12800.common.core.serial.Serializer;
  * @author -harry12800-
  *
  */
-public class LoginRequest extends Serializer{
-	
+public class LoginRequest extends Serializer {
+
 	/**
 	 * 用户名
 	 */
 	private String playerName;
-	
+
 	/**
 	 * 密码
 	 */
