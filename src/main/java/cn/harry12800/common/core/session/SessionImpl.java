@@ -37,7 +37,8 @@ public class SessionImpl implements Session {
 	
 	@Override
 	public void removeAttachment() {
-		channel.attr(ATTACHMENT_KEY).remove();
+//		remove 过过期
+		channel.attr(ATTACHMENT_KEY).set(null);
 	}
 
 	@Override

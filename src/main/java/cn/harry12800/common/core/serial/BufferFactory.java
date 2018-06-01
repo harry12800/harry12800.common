@@ -10,6 +10,7 @@ import java.nio.ByteOrder;
  * @author -harry12800-
  *
  */
+@SuppressWarnings("deprecation")
 public class BufferFactory {
 	
 	public static ByteOrder BYTE_ORDER = ByteOrder.BIG_ENDIAN;
@@ -21,6 +22,7 @@ public class BufferFactory {
 	 * 
 	 * @return
 	 */
+
 	public static ByteBuf getBuffer() {
 		ByteBuf buffer = bufAllocator.heapBuffer();
 		buffer = buffer.order(BYTE_ORDER);
