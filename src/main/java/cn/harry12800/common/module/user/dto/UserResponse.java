@@ -76,4 +76,10 @@ public class UserResponse extends Serializer {
 		writeInt(level);
 		writeInt(exp);
 	}
+
+	@Override
+	public String toString() {
+		return "UserResponse [id=" + id + ", userName=" + userName + ", level=" + level + ", exp=" + exp + "]";
+	}
+	
 }
