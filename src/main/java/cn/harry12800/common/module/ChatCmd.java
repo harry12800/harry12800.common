@@ -23,4 +23,6 @@ public interface ChatCmd {
 	 * 消息推送命令
 	 */
 	short PUSHCHAT = 101;
+
+	short PRIVATE_CHATTING = 4;
 }
