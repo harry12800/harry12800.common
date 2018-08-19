@@ -15,4 +15,8 @@ public interface ModuleId {
 	 * 资源
 	 */
 	short RESOURCE = 3;
+	/**
+	 * 系统消息
+	 */
+	short SYSTEM = 4;
 }

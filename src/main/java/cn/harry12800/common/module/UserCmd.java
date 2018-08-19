@@ -16,7 +16,6 @@ public interface UserCmd {
 	 * 登录帐号
 	 */
 	short LOGIN = 2;
-
 	short SHOW_ALL_USER = 3;
 	short PULL_MSG = 4;
 }
