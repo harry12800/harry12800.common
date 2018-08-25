@@ -26,7 +26,7 @@ public interface ChatCmd {
 	 */
 	short PRIVATE_CHATTING = 4;
 	short FILE_CHAT_RESULT = 5;
-
+	short SHAKE = 6;
 	//===============分割线===================================
 
 	/**
@@ -37,6 +37,8 @@ public interface ChatCmd {
 	 * 好友掉线推送命令
 	 */
 	short OFFLINE = 102;
+
+
 
 	
 }
