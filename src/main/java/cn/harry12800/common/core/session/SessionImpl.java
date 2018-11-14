@@ -5,7 +5,7 @@ import io.netty.util.AttributeKey;
 
 /**
  * 会话封装类
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class SessionImpl implements Session {
