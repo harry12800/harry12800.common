@@ -1,14 +1,14 @@
 package cn.harry12800.common.core.serial;
 
+import java.nio.ByteOrder;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.PooledByteBufAllocator;
 
-import java.nio.ByteOrder;
-
 /**
  * buff工厂
- * @author -harry12800-
+ * @author harry12800
  *
  */
 @SuppressWarnings("deprecation")

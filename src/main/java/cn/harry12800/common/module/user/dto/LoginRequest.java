@@ -4,7 +4,7 @@ import cn.harry12800.common.core.serial.Serializer;
 
 /**
  * 登录请求
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class LoginRequest extends Serializer {

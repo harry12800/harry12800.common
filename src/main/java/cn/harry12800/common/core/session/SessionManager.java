@@ -8,11 +8,10 @@ import com.google.protobuf.GeneratedMessage;
 
 import cn.harry12800.common.core.model.Response;
 import cn.harry12800.common.core.serial.Serializer;
-import cn.harry12800.common.core.session.Session;
 
 /**
  * 会话管理者
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class SessionManager {
@@ -38,20 +37,20 @@ public class SessionManager {
 
 	/**
 	 * 移除
-	 * @param playerId
+	 * @param userId
 	 */
-	public static Session removeSession(long playerId) {
-		return onlineSessions.remove(playerId);
+	public static Session removeSession(long userId) {
+		return onlineSessions.remove(userId);
 	}
 
 	/**
 	 * 发送消息[自定义协议]
 	 * @param <T>
-	 * @param playerId
+	 * @param userId
 	 * @param message
 	 */
-	public static <T extends Serializer> void sendMessage(long playerId, short module, short cmd, T message) {
-		Session session = onlineSessions.get(playerId);
+	public static <T extends Serializer> void sendMessage(long userId, short module, short cmd, T message) {
+		Session session = onlineSessions.get(userId);
 		if (session != null && session.isConnected()) {
 			Response response = new Response(module, cmd, message.getBytes());
 			session.write(response);
@@ -74,18 +73,18 @@ public class SessionManager {
 
 	/**
 	 * 是否在线
-	 * @param playerId
+	 * @param userId
 	 * @return
 	 */
-	public static boolean isOnlinePlayer(long playerId) {
-		return onlineSessions.containsKey(playerId);
+	public static boolean isOnlinePlayer(long userId) {
+		return onlineSessions.containsKey(userId);
 	}
 
 	/**
-	 * 获取所有在线玩家
+	 * 获取所有在线用户
 	 * @return
 	 */
-	public static Set<Long> getOnlinePlayers() {
+	public static Set<Long> getOnlineUsers() {
 		return Collections.unmodifiableSet(onlineSessions.keySet());
 	}
 }

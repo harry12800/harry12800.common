@@ -3,8 +3,8 @@ package cn.harry12800.common.module.user.dto;
 import cn.harry12800.common.core.serial.Serializer;
 
 /**
- * 玩家信息
- * @author -harry12800-
+ * 用户信息
+ * @author harry12800
  *
  */
 public class UserResponse extends Serializer {

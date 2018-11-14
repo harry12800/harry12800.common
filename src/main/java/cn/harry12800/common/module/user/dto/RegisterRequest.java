@@ -4,7 +4,7 @@ import cn.harry12800.common.core.serial.Serializer;
 
 /**
  * 注册请求
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class RegisterRequest extends Serializer {
@@ -12,7 +12,7 @@ public class RegisterRequest extends Serializer {
 	/**
 	 * 用户名
 	 */
-	private String playerName;
+	private String userName;
 
 	/**
 	 * 密码
@@ -20,11 +20,11 @@ public class RegisterRequest extends Serializer {
 	private String passward;
 
 	public String getPlayerName() {
-		return playerName;
+		return userName;
 	}
 
 	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
+		this.userName = playerName;
 	}
 
 	public String getPassward() {
@@ -37,13 +37,13 @@ public class RegisterRequest extends Serializer {
 
 	@Override
 	protected void read() {
-		this.playerName = readString();
+		this.userName = readString();
 		this.passward = readString();
 	}
 
 	@Override
 	protected void write() {
-		writeString(playerName);
+		writeString(userName);
 		writeString(passward);
 	}
 }

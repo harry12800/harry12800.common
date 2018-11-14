@@ -9,10 +9,10 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * <pre>
  * 数据包格式
  * +——----——+——-----——+——----——+——----——+——----——+——----——+
- * |  包头	|  模块号      |  命令号    |  结果码    |  长度       |   数据     |  
+ * |  包头	|  模块号         |  命令号      |  结果码      |  长度          |   数据       |  
  * +——----——+——-----——+——----——+——----——+——----——+——----——+
  * </pre>
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class ResponseEncoder extends MessageToByteEncoder<Response> {

@@ -1,8 +1,8 @@
 package cn.harry12800.common.module;
 
 /**
- * 玩家模块
- * @author -harry12800-
+ * 用户模块
+ * @author harry12800
  *
  */
 public interface UserCmd {

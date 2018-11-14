@@ -1,17 +1,17 @@
 package cn.harry12800.common.core.codc;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 import cn.harry12800.common.core.model.Response;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.ByteToMessageDecoder;
 
 /**
  * <pre>
  * 数据包格式
  * +——----——+——-----——+——----——+——----——+——----——+——----——+
- * |  包头	|  模块号      |  命令号    |  结果码    |  长度       |   数据     |  
+ * |  包头	|  模块号         |  命令号      |  结果码      |  长度          |   数据       |  
  * +——----——+——-----——+——----——+——----——+——----——+——----——+
  * </pre>
  * @author -harry12800-

@@ -3,7 +3,7 @@ package cn.harry12800.common.module;
 public interface ModuleId {
 
 	/**
-	 * 玩家模块
+	 * 用户模块
 	 */
 	short USER = 1;
 

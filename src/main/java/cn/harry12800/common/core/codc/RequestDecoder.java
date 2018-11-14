@@ -20,7 +20,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  * 命令号2字节
  * 长度4字节(数据部分占有字节数量)
  * 
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class RequestDecoder extends ByteToMessageDecoder {

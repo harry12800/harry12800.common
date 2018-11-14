@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 
 /**
  * 请求命令
- * @author -harry12800-
+ * @author harry12800
  *
  */
 @Target(ElementType.METHOD)

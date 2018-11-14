@@ -23,12 +23,12 @@ public interface ResultCode {
 	int UNKOWN_EXCEPTION = 3;
 
 	/**
-	 * 玩家名或密码不能为空
+	 * 用户名或密码不能为空
 	 */
 	int PLAYERNAME_NULL = 4;
 
 	/**
-	 * 玩家名已使用
+	 * 用户名已使用
 	 */
 	int PLAYER_EXIST = 5;
 
@@ -53,9 +53,9 @@ public interface ResultCode {
 	int LOGIN_FAIL = 9;
 
 	/**
-	 * 玩家不在线
+	 * 用户不在线
 	 */
-	int PLAYER_NO_ONLINE = 10;
+	int USER_NO_ONLINE = 10;
 
 	/**
 	 * 请先登录

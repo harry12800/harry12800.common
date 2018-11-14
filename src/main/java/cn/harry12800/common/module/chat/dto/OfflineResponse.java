@@ -9,6 +9,7 @@ public class OfflineResponse extends Serializer {
 	}
 
 	public long userId;
+
 	@Override
 	protected void read() {
 		userId = readLong();

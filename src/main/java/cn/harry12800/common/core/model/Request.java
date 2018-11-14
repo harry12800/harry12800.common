@@ -2,7 +2,7 @@ package cn.harry12800.common.core.model;
 
 /**
  * 消息对象
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class Request {

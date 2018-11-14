@@ -2,7 +2,7 @@ package cn.harry12800.common.core.exception;
 
 /**
  * 错误码携带异常
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class ErrorCodeException extends RuntimeException {

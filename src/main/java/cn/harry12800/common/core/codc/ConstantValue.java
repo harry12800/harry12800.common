@@ -2,7 +2,7 @@ package cn.harry12800.common.core.codc;
 
 /**
  * 静态值
- * @author admin
+ * @author harry12800
  *
  */
 public interface ConstantValue {

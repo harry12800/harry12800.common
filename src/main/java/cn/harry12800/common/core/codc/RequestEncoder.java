@@ -12,7 +12,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * |  包头	|  模块号      |  命令号    |   长度     |   数据       |
  * +——----——+——-----——+——----——+——----——+——-----——+
  * </pre>
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class RequestEncoder extends MessageToByteEncoder<Request> {

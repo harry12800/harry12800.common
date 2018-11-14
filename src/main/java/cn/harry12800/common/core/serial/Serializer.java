@@ -1,8 +1,5 @@
 package cn.harry12800.common.core.serial;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.util.ReferenceCountUtil;
-
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,9 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.util.ReferenceCountUtil;
+
 /**
  * 自定义序列化接口
- * @author -harry12800-
+ * 
+ * @author harry12800
  *
  */
 public abstract class Serializer {
@@ -36,19 +37,22 @@ public abstract class Serializer {
 
 	/**
 	 * 从byte数组获取数据
-	 * @param bytes	读取的数组
+	 * 
+	 * @param bytes
+	 *            读取的数组
 	 */
 	public Serializer readFromBytes(byte[] bytes) {
 		readBuffer = BufferFactory.getBuffer(bytes);
 		read();
 		readBuffer.clear();
-		//释放buffer
+		// 释放buffer
 		ReferenceCountUtil.release(readBuffer);
 		return this;
 	}
 
 	/**
 	 * 从buff获取数据
+	 * 
 	 * @param readBuffer
 	 */
 	public void readFromBuffer(ByteBuf readBuffer) {
@@ -58,6 +62,7 @@ public abstract class Serializer {
 
 	/**
 	 * 写入本地buff
+	 * 
 	 * @return
 	 */
 	public ByteBuf writeToLocalBuff() {
@@ -68,6 +73,7 @@ public abstract class Serializer {
 
 	/**
 	 * 写入目标buff
+	 * 
 	 * @param buffer
 	 * @return
 	 */
@@ -92,7 +98,7 @@ public abstract class Serializer {
 			writeBuffer.readBytes(bytes);
 		}
 		writeBuffer.clear();
-		//释放buffer
+		// 释放buffer
 		ReferenceCountUtil.release(writeBuffer);
 		return bytes;
 	}

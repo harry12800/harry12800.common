@@ -2,7 +2,7 @@ package cn.harry12800.common.core.session;
 
 /**
  * 会话抽象接口
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public interface Session {
