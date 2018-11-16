@@ -14,7 +14,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  * |  包头	|  模块号         |  命令号      |  结果码      |  长度          |   数据       |  
  * +——----——+——-----——+——----——+——----——+——----——+——----——+
  * </pre>
- * @author -harry12800-
+ * @author harry12800
  *
  */
 public class ResponseDecoder extends ByteToMessageDecoder {
