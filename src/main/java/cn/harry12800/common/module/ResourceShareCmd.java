@@ -1,7 +1,7 @@
 package cn.harry12800.common.module;
 
 /**
- * 聊天模块
+ * ziyuan模块
  * @author harry12800
  *
  */
