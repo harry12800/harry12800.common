@@ -25,17 +25,17 @@ public interface ResultCode {
 	/**
 	 * 用户名或密码不能为空
 	 */
-	int PLAYERNAME_NULL = 4;
+	int USERNAME_NULL = 4;
 
 	/**
 	 * 用户名已使用
 	 */
-	int PLAYER_EXIST = 5;
+	int USER_EXIST = 5;
 
 	/**
-	 * 玩家不存在
+	 * 用户不存在
 	 */
-	int PLAYER_NO_EXIST = 6;
+	int USER_NO_EXIST = 6;
 
 	/**
 	 * 密码错误

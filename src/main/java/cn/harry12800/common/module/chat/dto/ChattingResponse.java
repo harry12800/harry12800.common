@@ -16,7 +16,7 @@ public class ChattingResponse  extends Serializer {
 		
 	}
 
-	public MsgResponse setFromId(long playerId) {
+	public MsgResponse setFromId(long userId) {
 		return null;
 	}
 

@@ -33,16 +33,16 @@ public class UserResponse extends Serializer {
 		return id;
 	}
 
-	public void setId(long playerId) {
-		this.id = playerId;
+	public void setId(long userId) {
+		this.id = userId;
 	}
 
 	public String getUserName() {
 		return userName;
 	}
 
-	public void setUserName(String playerName) {
-		this.userName = playerName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public int getLevel() {

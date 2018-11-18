@@ -19,12 +19,12 @@ public class RegisterRequest extends Serializer {
 	 */
 	private String passward;
 
-	public String getPlayerName() {
+	public String getUserName() {
 		return userName;
 	}
 
-	public void setPlayerName(String playerName) {
-		this.userName = playerName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassward() {

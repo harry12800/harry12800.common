@@ -12,19 +12,19 @@ public class HeartRequest extends Serializer {
 	/**
 	 * 要向哪个会话发消息
 	 */
-	private long targetPlayerId;
+	private long targetUserId;
 
 	/**
 	 * 内容
 	 */
 	private String context;
 
-	public long getTargetPlayerId() {
-		return targetPlayerId;
+	public long getTargetUserId() {
+		return targetUserId;
 	}
 
-	public void setTargetPlayerId(long targetPlayerId) {
-		this.targetPlayerId = targetPlayerId;
+	public void setTargetUserId(long targetUserId) {
+		this.targetUserId = targetUserId;
 	}
 
 	public String getContext() {
@@ -37,13 +37,13 @@ public class HeartRequest extends Serializer {
 
 	@Override
 	protected void read() {
-		this.targetPlayerId = readLong();
+		this.targetUserId = readLong();
 		this.context = readString();
 	}
 
 	@Override
 	protected void write() {
-		writeLong(targetPlayerId);
+		writeLong(targetUserId);
 		writeString(context);
 	}
 }

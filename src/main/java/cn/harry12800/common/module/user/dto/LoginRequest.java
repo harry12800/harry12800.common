@@ -23,7 +23,7 @@ public class LoginRequest extends Serializer {
 		return userName;
 	}
 
-	public void setPlayerName(String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 

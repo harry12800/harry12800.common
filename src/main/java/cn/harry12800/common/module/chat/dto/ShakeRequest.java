@@ -11,23 +11,23 @@ public class ShakeRequest extends Serializer {
 	/**
 	 * 要向哪个会话发消息
 	 */
-	private long targetPlayerId; 
+	private long targetUserId; 
 	@Override
 	protected void read() {
-		this.targetPlayerId = readLong();
+		this.targetUserId = readLong();
 	}
 
 	@Override
 	protected void write() {
-		writeLong(targetPlayerId);
+		writeLong(targetUserId);
 	}
 
-	public long getTargetPlayerId() {
-		return targetPlayerId;
+	public long getTargetUserId() {
+		return targetUserId;
 	}
 
-	public void setTargetPlayerId(long targetPlayerId) {
-		this.targetPlayerId = targetPlayerId;
+	public void setTargetUserId(long targetUserId) {
+		this.targetUserId = targetUserId;
 	}
 	
 }
