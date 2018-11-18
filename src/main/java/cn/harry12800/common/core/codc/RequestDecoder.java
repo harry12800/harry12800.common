@@ -60,19 +60,19 @@ public class RequestDecoder extends ByteToMessageDecoder {
 				short cmd = buffer.readShort();
 
 				//读取数据长度 
-				int lenth = buffer.readInt();
-				if (lenth < 0) {
+				int len = buffer.readInt();
+				if (len < 0) {
 					ctx.channel().close();
 				}
 
 				//数据包还没到齐
-				if (buffer.readableBytes() < lenth) {
+				if (buffer.readableBytes() < len) {
 					buffer.readerIndex(beginIndex);
 					return;
 				}
 
 				//读数据部分
-				byte[] data = new byte[lenth];
+				byte[] data = new byte[len];
 				buffer.readBytes(data);
 
 				Request message = new Request();
@@ -85,7 +85,6 @@ public class RequestDecoder extends ByteToMessageDecoder {
 				break;
 			}
 		}
-
 		//数据不完整，等待完整的数据包
 		return;
 	}
