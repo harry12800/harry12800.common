@@ -23,13 +23,13 @@ public class SessionManager {
 
 	/**
 	 * 加入
-	 * @param playerId
+	 * @param userId
 	 * @param channel
 	 * @return
 	 */
-	public static boolean putSession(long playerId, Session session) {
-		if (!onlineSessions.containsKey(playerId)) {
-			boolean success = onlineSessions.putIfAbsent(playerId, session) == null ? true : false;
+	public static boolean putSession(long userId, Session session) {
+		if (!onlineSessions.containsKey(userId)) {
+			boolean success = onlineSessions.putIfAbsent(userId, session) == null ? true : false;
 			return success;
 		}
 		return false;
@@ -60,11 +60,11 @@ public class SessionManager {
 	/**
 	 * 发送消息[protoBuf协议]
 	 * @param <T>
-	 * @param playerId
+	 * @param userId
 	 * @param message
 	 */
-	public static <T extends GeneratedMessage> void sendMessage(long playerId, short module, short cmd, T message) {
-		Session session = onlineSessions.get(playerId);
+	public static <T extends GeneratedMessage> void sendMessage(long userId, short module, short cmd, T message) {
+		Session session = onlineSessions.get(userId);
 		if (session != null && session.isConnected()) {
 			Response response = new Response(module, cmd, message.toByteArray());
 			session.write(response);
@@ -76,7 +76,7 @@ public class SessionManager {
 	 * @param userId
 	 * @return
 	 */
-	public static boolean isOnlinePlayer(long userId) {
+	public static boolean isOnlineUser(long userId) {
 		return onlineSessions.containsKey(userId);
 	}
 

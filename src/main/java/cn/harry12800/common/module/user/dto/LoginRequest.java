@@ -12,19 +12,19 @@ public class LoginRequest extends Serializer {
 	/**
 	 * 用户名
 	 */
-	private String playerName;
+	private String userName;
 
 	/**
 	 * 密码
 	 */
 	private String passward;
 
-	public String getPlayerName() {
-		return playerName;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
+	public void setPlayerName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassward() {
@@ -37,13 +37,13 @@ public class LoginRequest extends Serializer {
 
 	@Override
 	protected void read() {
-		this.playerName = readString();
+		this.userName = readString();
 		this.passward = readString();
 	}
 
 	@Override
 	protected void write() {
-		writeString(playerName);
+		writeString(userName);
 		writeString(passward);
 	}
 }
