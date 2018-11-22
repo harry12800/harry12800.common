@@ -12,8 +12,8 @@ public class FileChatRequest extends Serializer {
 	/**
 	 * 要向哪个会话发消息
 	 */
-	private long targetUserId;
-	private long senderUserId;
+	private String targetUserId;
+	private String senderUserId;
 	private short total;
 	private short index;
 	private long position;
@@ -23,8 +23,8 @@ public class FileChatRequest extends Serializer {
 	 
 	@Override
 	protected void read() {
-		this.senderUserId = readLong();
-		this.targetUserId = readLong();
+		this.senderUserId = readString();
+		this.targetUserId = readString();
 		this.index = readShort();
 		this.total = readShort();
 		this.position = readLong();
@@ -36,8 +36,8 @@ public class FileChatRequest extends Serializer {
 
 	@Override
 	protected void write() {
-		writeLong(senderUserId);
-		writeLong(targetUserId);
+		writeString(senderUserId);
+		writeString(targetUserId);
 		writeShort(index);
 		writeShort(total);
 		writeLong(position);
@@ -48,19 +48,19 @@ public class FileChatRequest extends Serializer {
 		writeBuffer.writeBytes(data);
 	}
 
-	public long getSenderUserId() {
+	public String getSenderUserId() {
 		return senderUserId;
 	}
 
-	public void setSenderUserId(long senderUserId) {
+	public void setSenderUserId(String senderUserId) {
 		this.senderUserId = senderUserId;
 	}
 
-	public long getTargetUserId() {
+	public String getTargetUserId() {
 		return targetUserId;
 	}
 
-	public void setTargetUserId(long targetUserId) {
+	public void setTargetUserId(String targetUserId) {
 		this.targetUserId = targetUserId;
 	}
 

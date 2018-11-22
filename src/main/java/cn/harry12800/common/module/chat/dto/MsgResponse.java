@@ -8,8 +8,8 @@ import cn.harry12800.common.core.serial.Serializer;
 public class MsgResponse extends Serializer {
 	private long id;
 	private int online;
-	private long fromId;
-	private long toId;
+	private String fromId;
+	private String toId;
 	private Date sendTime;
 	private int dataType;
 	private byte[] data;
@@ -18,8 +18,8 @@ public class MsgResponse extends Serializer {
 	protected void read() {
 		id = readLong();
 		online = readInt();
-		fromId = readLong();
-		toId = readLong();
+		fromId = readString();
+		toId = readString();
 		sendTime = new Date(readLong());
 		dataType = readInt();
 		data = readString().getBytes();
@@ -29,8 +29,8 @@ public class MsgResponse extends Serializer {
 	protected void write() {
 		writeLong(id);
 		writeInt(online);
-		writeLong(fromId);
-		writeLong(toId);
+		writeString(fromId);
+		writeString(toId);
 		writeLong(sendTime.getTime());
 		writeInt(dataType);
 		writeString(new String(data));
@@ -54,20 +54,20 @@ public class MsgResponse extends Serializer {
 		return this;
 	}
 
-	public long getFromId() {
+	public String getFromId() {
 		return fromId;
 	}
 
-	public MsgResponse setFromId(long fromId) {
+	public MsgResponse setFromId(String fromId) {
 		this.fromId = fromId;
 		return this;
 	}
 
-	public long getToId() {
+	public String getToId() {
 		return toId;
 	}
 
-	public MsgResponse setToId(long toId) {
+	public MsgResponse setToId(String toId) {
 		this.toId = toId;
 		return this;
 	}

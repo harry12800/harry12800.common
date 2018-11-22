@@ -10,4 +10,9 @@ public interface ConstantValue {
 	 * 包头标识
 	 */
 	public static int HEADER_FLAG = -21415431;
+
+	public static void main(String[] args) {
+		String hexString = Integer.toHexString(-21415431);
+		System.out.println(hexString);
+	}
 }
