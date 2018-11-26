@@ -14,7 +14,7 @@ public class UserResponse extends Serializer {
 	 * id
 	 */
 	private long id;
-
+ 
 	/**
 	 * 用户名
 	 */
