@@ -19,7 +19,6 @@ public class RequestEncoder extends MessageToByteEncoder<Request> {
 
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Request message, ByteBuf buffer) throws Exception {
-
 		//包头
 		buffer.writeInt(ConstantValue.HEADER_FLAG);
 		//module
